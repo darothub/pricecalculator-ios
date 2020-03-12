@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pricecalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Sales Tax" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-xy-fKQ">
+                                <rect key="frame" x="56" y="301" width="263" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Q6-TD-sdi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYi-8B-2WB" customClass="SAButton" customModule="pricecalculator" customModuleProvider="target">
+                                <rect key="frame" x="40" y="597" width="295" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="41P-5J-Nyd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="23"/>
+                                <state key="normal" title="CALCULATE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="calculatePrice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tab-Lq-oIf"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oux-AV-ZvN">
+                                <rect key="frame" x="56" y="221" width="263" height="50"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IxT-DE-BMO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120.0NGN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUh-Cl-Ohg">
+                                <rect key="frame" x="56" y="71" width="263" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bdX-II-ozW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DUh-Cl-Ohg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="0G7-GR-5ZE"/>
+                            <constraint firstItem="iYi-8B-2WB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="2Be-9z-3lW"/>
+                            <constraint firstItem="Ryo-xy-fKQ" firstAttribute="top" secondItem="oux-AV-ZvN" secondAttribute="bottom" constant="30" id="6Lq-To-Y0T"/>
+                            <constraint firstAttribute="trailing" secondItem="iYi-8B-2WB" secondAttribute="trailing" constant="40" id="79A-bI-VZE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iYi-8B-2WB" secondAttribute="trailing" constant="40" id="84Q-az-8WW"/>
+                            <constraint firstItem="iYi-8B-2WB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="8Gl-tG-pgt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iYi-8B-2WB" secondAttribute="bottom" constant="20" id="8aN-ci-Dk8"/>
+                            <constraint firstItem="oux-AV-ZvN" firstAttribute="top" secondItem="DUh-Cl-Ohg" secondAttribute="bottom" constant="100" id="D5U-en-yj2"/>
+                            <constraint firstItem="iYi-8B-2WB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="IUq-Us-Izt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iYi-8B-2WB" secondAttribute="trailing" constant="10" id="Lsg-sT-d7c"/>
+                            <constraint firstItem="iYi-8B-2WB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="NEz-wT-XXd"/>
+                            <constraint firstItem="Ryo-xy-fKQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="TIk-Ib-irS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DUh-Cl-Ohg" secondAttribute="trailing" constant="40" id="TXj-cQ-u8A"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oux-AV-ZvN" secondAttribute="trailing" constant="40" id="ViT-Id-EH7"/>
+                            <constraint firstItem="DUh-Cl-Ohg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="cEr-nG-7lK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iYi-8B-2WB" secondAttribute="trailing" constant="40" id="gcj-7r-IbR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ryo-xy-fKQ" secondAttribute="trailing" constant="40" id="h7N-Zo-hTA"/>
+                            <constraint firstItem="oux-AV-ZvN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="iK7-CN-JzQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iYi-8B-2WB" secondAttribute="bottom" constant="30" id="puT-Rd-Jk6"/>
+                            <constraint firstItem="oux-AV-ZvN" firstAttribute="top" secondItem="DUh-Cl-Ohg" secondAttribute="bottom" constant="100" id="qbB-tN-8om"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iYi-8B-2WB" secondAttribute="bottom" constant="20" id="xXN-h2-FWu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="oux-AV-ZvN" id="Twg-3E-Syy"/>
+                        <outlet property="salesTax" destination="Ryo-xy-fKQ" id="Ibd-We-rlx"/>
+                        <outlet property="total" destination="DUh-Cl-Ohg" id="quv-KF-l4F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4475.36231884058" y="21.428571428571427"/>
+        </scene>
+    </scenes>
+</document>
